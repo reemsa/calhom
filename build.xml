@@ -11,6 +11,11 @@
 </path>
 <target name="compile">
 <mkdir dir="${result.javaclasses.dir}"/>
+  <javac srcdir="src/" destdir="build/classes" debug="true" includeantruntime="true">
+  <classpath>
+    <path id="org.junit" location="c:/eclipse/plugins/org.apache.ant_1.8.3.v20120321-1730/lib/junit.jar" /> <!-- not sure if you need this -->
+  </classpath>
+</javac>
 <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true"
 includeantruntime="false">
 <classpath>
